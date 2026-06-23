@@ -1,0 +1,31 @@
+&nl_colm_forcing
+
+   ! ----- forcing -----
+   DEF_dir_forcing  = '/stu01/caoxq18/lake_data/Harp/forcing/'
+
+   DEF_forcing%dataset           = 'POINT' 
+   DEF_forcing%solarin_all_band  = .true.  
+   DEF_forcing%HEIGHT_V          = 2.0    
+   DEF_forcing%HEIGHT_T          = 1.75
+   DEF_forcing%HEIGHT_Q          = 1.75
+   
+   DEF_forcing%NVAR              = 8        ! variable number of forcing data
+   DEF_forcing%startyr           = 2010     ! start year of forcing data  
+   DEF_forcing%startmo           = 7        ! start month of forcing data
+   DEF_forcing%endyr             = 2015     ! end year of forcing data
+   DEF_forcing%endmo             = 10       ! end month of forcing data
+   DEF_forcing%dtime             = 3600 3600 3600 3600 3600 3600 3600 3600
+   
+   DEF_forcing%fprefix(1) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(2) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(3) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(4) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(5) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(6) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(7) = 'Harp-20100714-20151019.nc'
+   DEF_forcing%fprefix(8) = 'Harp-20100714-20151019.nc'
+   
+   DEF_forcing%vname    = 'Tair' 'Qair' 'Psurf' 'Precip' 'NULL' 'Wind' 'SWdown' 'LWdown' 
+   DEF_forcing%tintalgo = 'linear' 'linear' 'linear' 'nearest' 'NULL' 'linear' 'coszen' 'linear'
+
+/
